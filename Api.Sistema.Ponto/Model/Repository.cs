@@ -29,11 +29,11 @@ namespace Api.Sistema.Ponto.Model
         {
             using (IDbConnection dbConnection = Connection)
             {
-                string sql = @"INSERT INTO INFO (Loguin, senha, Id, CPF)
+                string query = @"INSERT INTO INFO (Loguin, senha, Id, CPF)
 
                              VALUES(@Loguin, @senha, @Id, @CPF)";
                 dbConnection.Open();
-                dbConnection.Execute(sql, loginModel);
+                dbConnection.Execute(query, loginModel);
             }
         }
 
